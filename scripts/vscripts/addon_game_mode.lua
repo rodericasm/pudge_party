@@ -2,10 +2,9 @@
 require("game_setup")
 if CAddonTemplateGameMode == nil then
 	CAddonTemplateGameMode = class({})
-	
 end
 
-function Precache( context )
+function Precache(context)
 	--[[
 		Precache things we know we'll use.  Possible file types include (but not limited to):
 			PrecacheResource( "model", "*.vmdl", context )
@@ -15,8 +14,6 @@ function Precache( context )
 	]]
 end
 
-
-
 -- Create the game mode when we activate
 function Activate()
 	GameRules.AddonTemplate = CAddonTemplateGameMode()
@@ -24,14 +21,15 @@ function Activate()
 end
 
 function CAddonTemplateGameMode:InitGameMode()
-	print( "Template addon is loaded." )
-	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
+	print("Template addon is loaded.")
+	GameRules:GetGameModeEntity():SetThink("OnThink", self, "GlobalThink", 2)
 
 	GameSetup.init()
-	local tezt = CreateUnitByName("npc_dota_hero_bounty_hunter", Vector(-117,-18,0), true, nil, nil, DOTA_TEAM_BADGUYS)
+	CreateUnitByName("npc_dota_creature_gnoll_assassin", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
+	local tezt = CreateUnitByName("npc_dota_hero_bounty_hunter", Vector(0, 0, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
 	tezt:AddAbility("test_blink")
 	print(tezt:GetProjectileSpeed())
-	tezt:MoveToPosition(Vector(-58, -1000,0))
+	tezt:MoveToPosition(Vector(-58, -1000, 0))
 end
 
 -- Evaluate the state of the game

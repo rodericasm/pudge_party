@@ -10,12 +10,12 @@
 	{
 		// General
 		//----------------------------------------------------------------
-		"Model"						"models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll_frost.vmdl"	// Model.
+		"Model"						"models/items/courier/mighty_chicken/mighty_chicken.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
 		"Level"						"1"
-		"ModelScale" 				".9"
+		"ModelScale" 				"0.5"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -39,7 +39,7 @@
 		"AttackRange"				"500"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/neutral_fx/gnoll_base_attack.vpcf" // Particle system model for projectile.
 		"ProjectileSpeed"			"1500"		// Speed of projectile.		     
-
+		
 		// Bounds
 		//----------------------------------------------------------------
 		"RingRadius"				"40"
@@ -54,7 +54,9 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"270"		// Speed.			
+		"MovementSpeed"				"1500"		// Speed.			
+		"MovementTurnRate"			"1.0"
+		"IsPurgable" 				"0"
 
 		// Status
 		//----------------------------------------------------------------
@@ -74,6 +76,8 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		"vscripts"					"ai_chicken_bwokbwok.lua"
 
 		// Creature Data
 		//----------------------------------------------------------------
