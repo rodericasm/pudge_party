@@ -3,7 +3,7 @@ if GameSetup == nil then
 end
 
 --nil will not force a hero selection
-local forceHero = "lina"
+local forceHero = "pudge"
 
 function GameSetup:init()
   if IsInToolsMode() then --debug build

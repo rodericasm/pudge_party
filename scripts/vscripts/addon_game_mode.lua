@@ -1,6 +1,6 @@
 -- Generated from template
 require("game_setup")
-require("game/game_core")
+require("game/mg_core")
 if CAddonTemplateGameMode == nil then
 	CAddonTemplateGameMode = class({})
 end
@@ -31,7 +31,7 @@ function CAddonTemplateGameMode:InitGameMode()
 	CreateUnitByName("npc_chicken_hungry_pudge", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
 	CreateUnitByName("npc_chicken_hungry_pudge", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
 	CreateUnitByName("npc_chicken_hungry_pudge", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
-	print(PlayerResource)
+	print(mg_core.minigame_list_size)
 end
 
 -- Evaluate the state of the game

@@ -6,13 +6,13 @@ random_timers_iterator = 0
 
 function Spawn(entityKeyValues)
     thisEntity:SetContextThink("ai_think", ai_think, 0.25)
-    behaviour_system = ai_core:create_behaviour_system({behaviour_roam}, 0.25)
+    behaviour_system = ai_core:create_behaviour_system({behaviour_roam}, 0.5)
     --block is needed for strange behaviour in lua random, without it, first number can be predictable.
     math.randomseed(RandomInt(0, 1000))
     math.random()
     --
     for i = 0, 20 do
-        random_timers_array[i] = math.random(RandomFloat(0, 0.75))
+        random_timers_array[i] = math.random(RandomFloat(0, 1))
     end
 end
 
