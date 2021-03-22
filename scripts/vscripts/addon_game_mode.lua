@@ -1,5 +1,6 @@
 -- Generated from template
 require("game_setup")
+require("game/game_core")
 if CAddonTemplateGameMode == nil then
 	CAddonTemplateGameMode = class({})
 end
@@ -25,11 +26,12 @@ function CAddonTemplateGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetThink("OnThink", self, "GlobalThink", 2)
 
 	GameSetup.init()
-	CreateUnitByName("npc_dota_creature_gnoll_assassin", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
-	local tezt = CreateUnitByName("npc_dota_hero_bounty_hunter", Vector(0, 0, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
-	tezt:AddAbility("test_blink")
-	print(tezt:GetProjectileSpeed())
-	tezt:MoveToPosition(Vector(-58, -1000, 0))
+	CreateUnitByName("npc_chicken_hungry_pudge", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
+	CreateUnitByName("npc_chicken_hungry_pudge", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
+	CreateUnitByName("npc_chicken_hungry_pudge", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
+	CreateUnitByName("npc_chicken_hungry_pudge", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
+	CreateUnitByName("npc_chicken_hungry_pudge", Vector(-117, -18, 0), true, nil, nil, DOTA_TEAM_BADGUYS)
+	print(PlayerResource)
 end
 
 -- Evaluate the state of the game
