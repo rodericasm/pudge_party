@@ -5,8 +5,8 @@ random_timers_array = {}
 random_timers_iterator = 0
 
 function Spawn(entityKeyValues)
-    thisEntity:SetContextThink("ai_think", ai_think, 0.25)
     behaviour_system = ai_core:create_behaviour_system({behaviour_roam}, 0.5)
+    thisEntity:SetContextThink("ai_think", ai_think, 0.25)
     --block is needed for strange behaviour in lua random, without it, first number can be predictable.
     math.randomseed(RandomInt(0, 1000))
     math.random()
@@ -32,7 +32,7 @@ function behaviour_roam:begin()
     self.endTime = GameRules:GetGameTime() + random_timers_array[random_timers_iterator]
     self.order = {
         UnitIndex = thisEntity:entindex(),
-        OrderType = DOTA_UNIT_ORDER_PATROL, --has to movement patterns
+        OrderType = DOTA_UNIT_ORDER_PATROL,
         Position = Vector(0, 0) + RandomVector(500)
     }
 
